@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module progresso</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">progresso</strong></td>
+    <p><span class="code">Este&nbsp;módulo&nbsp;possuem&nbsp;funções&nbsp;simulam&nbsp;barra&nbsp;e&nbsp;animação&nbsp;de&nbsp;carregamento&nbsp;no&nbsp;terminal<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;módulo&nbsp;utiliza&nbsp;recursos&nbsp;da&nbsp;biblioteca&nbsp;Rich&nbsp;do&nbsp;Python,&nbsp;logo&nbsp;é&nbsp;estritamente&nbsp;necessário<br>
+que&nbsp;tenha&nbsp;a&nbsp;biblioteca&nbsp;instalada&nbsp;em&nbsp;sua&nbsp;máquina.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Há&nbsp;duas&nbsp;funções&nbsp;neste&nbsp;módulo:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;reading_arquive&nbsp;=&nbsp;gera&nbsp;uma&nbsp;barra&nbsp;de&nbsp;carregamento&nbsp;que&nbsp;simula&nbsp;uma&nbsp;leitura&nbsp;de&nbsp;arquivo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;loading_style&nbsp;=&nbsp;gera&nbsp;uma&nbsp;animação&nbsp;de&nbsp;carregamento&nbsp;que&nbsp;simular&nbsp;a&nbsp;rederização&nbsp;de&nbsp;estilos</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-loading_style"><strong>loading_style</strong></a>(isArquivo)</dt><dd><span class="code">Esta&nbsp;função&nbsp;gera&nbsp;uma&nbsp;animação&nbsp;carregamento&nbsp;simulando&nbsp;a&nbsp;rederização&nbsp;da&nbsp;estilização&nbsp;do&nbsp;arquivo<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;função&nbsp;recebe&nbsp;um&nbsp;argumentos:&nbsp;isArquivo&nbsp;(booleano).&nbsp;"isArquivo"&nbsp;indica&nbsp;se&nbsp;esta&nbsp;<br>
+sendo&nbsp;feita&nbsp;a&nbsp;"rederização"&nbsp;da&nbsp;estilização&nbsp;aplicada&nbsp;sobre&nbsp;um&nbsp;arquivo&nbsp;ou&nbsp;de&nbsp;uma&nbsp;string,&nbsp;<br>
+mudando&nbsp;apenas&nbsp;a&nbsp;mensagem&nbsp;que&nbsp;é&nbsp;exibida&nbsp;na&nbsp;tela.&nbsp;O&nbsp;tempo&nbsp;da&nbsp;rederização&nbsp;já&nbsp;é&nbsp;<br>
+predeterminado,&nbsp;sendo&nbsp;de&nbsp;2.5&nbsp;segundos.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Quando&nbsp;a&nbsp;"rederização"&nbsp;é&nbsp;finalizada&nbsp;é&nbsp;imprimida&nbsp;uma&nbsp;mesagem&nbsp;indicado&nbsp;que&nbsp;ela&nbsp;foi&nbsp;<br>
+concluida.</span></dd></dl>
+ <dl><dt><a name="-reading_arquive"><strong>reading_arquive</strong></a>(isArquivo, size)</dt><dd><span class="code">Esta&nbsp;função&nbsp;gera&nbsp;uma&nbsp;barra&nbsp;de&nbsp;carregamento&nbsp;simulando&nbsp;uma&nbsp;leitura&nbsp;de&nbsp;arquivo<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;função&nbsp;recebe&nbsp;dois&nbsp;argumentos:&nbsp;isArquivo&nbsp;(booleano)&nbsp;e&nbsp;size&nbsp;(int).&nbsp;"isArquivo"&nbsp;<br>
+indica&nbsp;se&nbsp;esta&nbsp;sendo&nbsp;feita&nbsp;uma&nbsp;"leitura"&nbsp;de&nbsp;um&nbsp;arquivo&nbsp;ou&nbsp;de&nbsp;uma&nbsp;string,&nbsp;mudando&nbsp;as&nbsp;<br>
+mensagens&nbsp;exibidas,&nbsp;e&nbsp;a&nbsp;velociadade&nbsp;em&nbsp;que&nbsp;é&nbsp;feita&nbsp;a&nbsp;"leitura",&nbsp;já&nbsp;que&nbsp;arquivos&nbsp;<br>
+costuman&nbsp;ser&nbsp;muito&nbsp;mais&nbsp;pesados&nbsp;que&nbsp;strings.&nbsp;"size"&nbsp;indica&nbsp;o&nbsp;tamanho&nbsp;do&nbsp;arquivo&nbsp;em&nbsp;<br>
+bytes&nbsp;e&nbsp;influencia&nbsp;diretamente&nbsp;no&nbsp;tempo&nbsp;que&nbsp;a&nbsp;"leitura"&nbsp;irá&nbsp;durar.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Quando&nbsp;a&nbsp;"leitura"&nbsp;é&nbsp;finalizada&nbsp;é&nbsp;imprimida&nbsp;uma&nbsp;mesagem&nbsp;indicado&nbsp;que&nbsp;ela&nbsp;foi&nbsp;<br>
+concluida.</span></dd></dl>
+ <dl><dt><a name="-sleep"><strong>sleep</strong></a>(...)</dt><dd><span class="code"><a href="#-sleep">sleep</a>(seconds)<br>
+&nbsp;<br>
+Delay&nbsp;execution&nbsp;for&nbsp;a&nbsp;given&nbsp;number&nbsp;of&nbsp;seconds.&nbsp;&nbsp;The&nbsp;argument&nbsp;may&nbsp;be<br>
+a&nbsp;floating&nbsp;point&nbsp;number&nbsp;for&nbsp;subsecond&nbsp;precision.</span></dd></dl>
+</td></tr></table>
+</body></html>

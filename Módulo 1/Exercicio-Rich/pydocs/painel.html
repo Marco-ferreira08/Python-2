@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module painel</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">painel</strong></td>
+&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;módulo&nbsp;utiliza&nbsp;recursos&nbsp;da&nbsp;biblioteca&nbsp;Rich&nbsp;do&nbsp;Python,&nbsp;logo&nbsp;é&nbsp;estritamente&nbsp;necessário<br>
+que&nbsp;tenha&nbsp;a&nbsp;biblioteca&nbsp;instalada&nbsp;em&nbsp;sua&nbsp;máquina.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Há&nbsp;duas&nbsp;funções&nbsp;neste&nbsp;módulo:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;panel_color&nbsp;=&nbsp;imprime&nbsp;o&nbsp;texto&nbsp;ou&nbsp;conteúdo&nbsp;de&nbsp;arquivo&nbsp;em&nbsp;um&nbsp;painel&nbsp;colorido<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;boder_color&nbsp;=&nbsp;imprime&nbsp;o&nbsp;texto&nbsp;ou&nbsp;conteúdo&nbsp;de&nbsp;arquivo&nbsp;em&nbsp;um&nbsp;painel&nbsp;com&nbsp;borda&nbsp;colorida</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="personalizador.progresso.html">personalizador.progresso</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-border_color"><strong>border_color</strong></a>(isArquivo, filename)</dt><dd><span class="code">Esta&nbsp;função&nbsp;imprime&nbsp;uma&nbsp;string&nbsp;ou&nbsp;conteúdo&nbsp;de&nbsp;arquivo&nbsp;em&nbsp;um&nbsp;painel&nbsp;com&nbsp;borda&nbsp;colorida<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;função&nbsp;recebe&nbsp;dois&nbsp;argumentos:&nbsp;isArquivo&nbsp;(booleano)&nbsp;filename&nbsp;(string).&nbsp;IsArquivo<br>
+indica&nbsp;que&nbsp;a&nbsp;string&nbsp;recebida&nbsp;é&nbsp;um&nbsp;arquivo,&nbsp;assim&nbsp;o&nbsp;conteúdo&nbsp;do&nbsp;arquivo&nbsp;é&nbsp;impresso&nbsp;é<br>
+impresso&nbsp;dentro&nbsp;do&nbsp;painel&nbsp;e&nbsp;seu&nbsp;caminho/nome&nbsp;é&nbsp;impresso&nbsp;no&nbsp;topo&nbsp;do&nbsp;painel.&nbsp;Caso&nbsp;o&nbsp;texto<br>
+recebido&nbsp;seja&nbsp;uma&nbsp;string&nbsp;qualquer&nbsp;ela&nbsp;será&nbsp;impressa&nbsp;diretamente&nbsp;dentro&nbsp;do&nbsp;painel.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Quando&nbsp;executada&nbsp;a&nbsp;função&nbsp;solicita,&nbsp;através&nbsp;de&nbsp;um&nbsp;input,&nbsp;a&nbsp;cor&nbsp;que&nbsp;deseja&nbsp;pintar&nbsp;o<br>
+texto&nbsp;e&nbsp;a&nbsp;borda&nbsp;do&nbsp;painel.&nbsp;A&nbsp;cor&nbsp;pode&nbsp;ser&nbsp;passada&nbsp;por&nbsp;meio&nbsp;de&nbsp;código&nbsp;hexadecimal,&nbsp;rgb<br>
+ou&nbsp;"color&nbsp;tag".&nbsp;A&nbsp;seguir&nbsp;temos&nbsp;um&nbsp;exemplo&nbsp;de&nbsp;cada&nbsp;uma&nbsp;das&nbsp;três&nbsp;forma,&nbsp;respectivamente,&nbsp;<br>
+para&nbsp;a&nbsp;cor&nbsp;branco:<br>
+#ffffff,&nbsp;rgb(255,&nbsp;255,&nbsp;255),&nbsp;white<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;biblioteca&nbsp;Rich&nbsp;possui&nbsp;256&nbsp;cores&nbsp;padrão&nbsp;nomeadas&nbsp;com&nbsp;"color&nbsp;tag",&nbsp;você&nbsp;pode<br>
+acessá-las&nbsp;pelo&nbsp;link&nbsp;abaixo:<br>
+&nbsp;<br>
+<a href="https://rich.readthedocs.io/en/stable/appendix/colors.html">https://rich.readthedocs.io/en/stable/appendix/colors.html</a><br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Esta&nbsp;é&nbsp;uma&nbsp;função&nbsp;simples,&nbsp;que&nbsp;apenas&nbsp;aplica&nbsp;a&nbsp;cor&nbsp;solicitada&nbsp;como&nbsp;propriedade<br>
+style&nbsp;do&nbsp;painel.&nbsp;Isso&nbsp;significa&nbsp;que&nbsp;você&nbsp;pode&nbsp;passar&nbsp;outros&nbsp;tipos&nbsp;de&nbsp;estilizações<br>
+além&nbsp;das&nbsp;cores&nbsp;para&nbsp;personalizar&nbsp;o&nbsp;borda.&nbsp;Caso&nbsp;queira&nbsp;conhecer&nbsp;outras&nbsp;formas&nbsp;de<br>
+estilizar&nbsp;a&nbsp;saída&nbsp;da&nbsp;função,&nbsp;digite&nbsp;o&nbsp;seguinte&nbsp;comando&nbsp;no&nbsp;terminal:<br>
+&nbsp;<br>
+python3&nbsp;-m&nbsp;rich.default_styles</span></dd></dl>
+ <dl><dt><a name="-panel_color"><strong>panel_color</strong></a>(isArquivo, filename)</dt><dd><span class="code">Esta&nbsp;função&nbsp;imprime&nbsp;uma&nbsp;string&nbsp;ou&nbsp;conteúdo&nbsp;de&nbsp;arquivo&nbsp;em&nbsp;um&nbsp;painel&nbsp;com&nbsp;texto&nbsp;e&nbsp;borda&nbsp;coloridos<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;função&nbsp;recebe&nbsp;dois&nbsp;argumentos:&nbsp;isArquivo&nbsp;(booleano)&nbsp;filename&nbsp;(string).&nbsp;IsArquivo<br>
+indica&nbsp;que&nbsp;a&nbsp;string&nbsp;recebida&nbsp;é&nbsp;um&nbsp;arquivo,&nbsp;assim&nbsp;o&nbsp;conteúdo&nbsp;do&nbsp;arquivo&nbsp;é&nbsp;impresso&nbsp;é<br>
+impresso&nbsp;dentro&nbsp;do&nbsp;painel&nbsp;e&nbsp;seu&nbsp;caminho/nome&nbsp;é&nbsp;impresso&nbsp;no&nbsp;topo&nbsp;do&nbsp;painel.&nbsp;Caso&nbsp;o&nbsp;texto<br>
+recebido&nbsp;seja&nbsp;uma&nbsp;string&nbsp;qualquer&nbsp;ela&nbsp;é&nbsp;impressa&nbsp;dentro&nbsp;do&nbsp;painel.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Quando&nbsp;executada&nbsp;a&nbsp;função&nbsp;solicita,&nbsp;através&nbsp;de&nbsp;um&nbsp;input,&nbsp;a&nbsp;cor&nbsp;que&nbsp;deseja&nbsp;pintar&nbsp;o<br>
+texto&nbsp;e&nbsp;a&nbsp;borda&nbsp;do&nbsp;painel.&nbsp;A&nbsp;cor&nbsp;pode&nbsp;ser&nbsp;passada&nbsp;por&nbsp;meio&nbsp;de&nbsp;código&nbsp;hexadecimal,&nbsp;rgb<br>
+ou&nbsp;"color&nbsp;tag".&nbsp;A&nbsp;seguir&nbsp;temos&nbsp;um&nbsp;exemplo&nbsp;de&nbsp;cada&nbsp;uma&nbsp;das&nbsp;três&nbsp;forma,&nbsp;respectivamente,&nbsp;<br>
+para&nbsp;a&nbsp;cor&nbsp;branco:<br>
+#ffffff,&nbsp;rgb(255,&nbsp;255,&nbsp;255),&nbsp;white<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;biblioteca&nbsp;Rich&nbsp;possui&nbsp;256&nbsp;cores&nbsp;padrão&nbsp;nomeadas&nbsp;com&nbsp;"color&nbsp;tag",&nbsp;você&nbsp;pode<br>
+acessá-las&nbsp;pelo&nbsp;link&nbsp;abaixo:<br>
+&nbsp;<br>
+<a href="https://rich.readthedocs.io/en/stable/appendix/colors.html">https://rich.readthedocs.io/en/stable/appendix/colors.html</a><br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Esta&nbsp;é&nbsp;uma&nbsp;função&nbsp;simples,&nbsp;que&nbsp;apenas&nbsp;aplica&nbsp;a&nbsp;cor&nbsp;solicitada&nbsp;como&nbsp;propriedade<br>
+style&nbsp;do&nbsp;painel.&nbsp;Isso&nbsp;significa&nbsp;que&nbsp;você&nbsp;pode&nbsp;passar&nbsp;outros&nbsp;tipos&nbsp;de&nbsp;estilizações<br>
+além&nbsp;das&nbsp;cores&nbsp;para&nbsp;personalizar&nbsp;o&nbsp;painel.&nbsp;Caso&nbsp;queira&nbsp;conhecer&nbsp;outras&nbsp;formas&nbsp;de<br>
+estilizar&nbsp;a&nbsp;saída&nbsp;da&nbsp;função,&nbsp;digite&nbsp;o&nbsp;seguinte&nbsp;comando&nbsp;no&nbsp;terminal:<br>
+&nbsp;<br>
+python3&nbsp;-m&nbsp;rich.default_styles</span></dd></dl>
+</td></tr></table>
+</body></html>

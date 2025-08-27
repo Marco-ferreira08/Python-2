@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module estilo</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">estilo</strong></td>
+    <p><span class="code">Este&nbsp;módulo&nbsp;permite&nbsp;ter&nbsp;acesso&nbsp;a&nbsp;funções&nbsp;que&nbsp;imprimem&nbsp;textos&nbsp;coloridos&nbsp;no&nbsp;terminal<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Este&nbsp;módulo&nbsp;e&nbsp;suas&nbsp;funções&nbsp;utilizam&nbsp;recursos&nbsp;da&nbsp;biblioteca&nbsp;Rich&nbsp;do&nbsp;Python,&nbsp;logo&nbsp;é<br>
+estritamente&nbsp;necessário&nbsp;que&nbsp;possua&nbsp;a&nbsp;biblioteca&nbsp;instalada&nbsp;em&nbsp;sua&nbsp;máquina.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As&nbsp;funções&nbsp;do&nbsp;módulo&nbsp;rebebem&nbsp;uma&nbsp;string&nbsp;e&nbsp;um&nbsp;valor&nbsp;booleano&nbsp;que&nbsp;diz&nbsp;se&nbsp;a&nbsp;string&nbsp;é<br>
+o&nbsp;caminho&nbsp;de&nbsp;um&nbsp;arquivo&nbsp;o&nbsp;não.&nbsp;Primeiramente&nbsp;elas&nbsp;exigem&nbsp;do&nbsp;usuário&nbsp;uma&nbsp;cor&nbsp;através&nbsp;de<br>
+um&nbsp;input&nbsp;para&nbsp;pintar&nbsp;o&nbsp;texto&nbsp;ou&nbsp;o&nbsp;fundo&nbsp;do&nbsp;texto.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Há&nbsp;duas&nbsp;funções&nbsp;disponíveis:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;text_color&nbsp;=&nbsp;pinta&nbsp;o&nbsp;texto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;background_color&nbsp;=&nbsp;pinta&nbsp;o&nbsp;fundo</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="personalizador.progresso.html">personalizador.progresso</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-background_color"><strong>background_color</strong></a>(isArquivo, filename)</dt><dd><span class="code">Esta&nbsp;função&nbsp;pinta&nbsp;o&nbsp;fundo&nbsp;texto&nbsp;recebido&nbsp;utilizando&nbsp;a&nbsp;biblioteca&nbsp;Rich&nbsp;do&nbsp;Python<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Para&nbsp;ela&nbsp;funcionar,&nbsp;precisa&nbsp;de&nbsp;dois&nbsp;argumentos&nbsp;iniciais:&nbsp;isArquivo&nbsp;(booleano)<br>
+e&nbsp;filename&nbsp;(string).&nbsp;isArquivo&nbsp;é&nbsp;para&nbsp;dizer&nbsp;se&nbsp;a&nbsp;string&nbsp;recebida&nbsp;é&nbsp;um&nbsp;caminho&nbsp;de&nbsp;<br>
+arquivo&nbsp;ou&nbsp;apenas&nbsp;uma&nbsp;string&nbsp;qualquer.&nbsp;Caso&nbsp;seja&nbsp;um&nbsp;caminho&nbsp;de&nbsp;arquivo,&nbsp;a&nbsp;função<br>
+lê&nbsp;o&nbsp;arquivo&nbsp;e&nbsp;aplica&nbsp;a&nbsp;estilização&nbsp;sobre&nbsp;o&nbsp;texto&nbsp;do&nbsp;arquivo.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Quando&nbsp;executada&nbsp;ela&nbsp;exige&nbsp;que&nbsp;digite&nbsp;uma&nbsp;cor&nbsp;para&nbsp;pintar&nbsp;o&nbsp;fundo,&nbsp;a&nbsp;cor&nbsp;pode&nbsp;<br>
+ser&nbsp;passada&nbsp;de&nbsp;três&nbsp;fomas:&nbsp;código&nbsp;hexadecimal,&nbsp;rgb&nbsp;e&nbsp;"color&nbsp;tag".&nbsp;A&nbsp;seguir&nbsp;tem&nbsp;exem-<br>
+plos&nbsp;de&nbsp;sintaxe&nbsp;para&nbsp;cor&nbsp;branco&nbsp;para&nbsp;código&nbsp;hexadecimal,&nbsp;rgb&nbsp;e&nbsp;"color&nbsp;tag",&nbsp;respe-<br>
+ctivamente:&nbsp;#ffffff,&nbsp;rgb(255,&nbsp;255,&nbsp;255),&nbsp;white.&nbsp;na&nbsp;biblioteca&nbsp;rich&nbsp;há&nbsp;256&nbsp;cores<br>
+padrão&nbsp;que&nbsp;são&nbsp;nomeadas&nbsp;com&nbsp;"color&nbsp;tag",&nbsp;para&nbsp;conhecê-las&nbsp;acesse&nbsp;o&nbsp;link&nbsp;abaixo:<br>
+&nbsp;<br>
+<a href="https://rich.readthedocs.io/en/stable/appendix/colors.html">https://rich.readthedocs.io/en/stable/appendix/colors.html</a><br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta&nbsp;função&nbsp;é&nbsp;necessário&nbsp;que&nbsp;passe&nbsp;apenas&nbsp;a&nbsp;cor&nbsp;que&nbsp;deseja&nbsp;pintar&nbsp;o&nbsp;fundo&nbsp;do<br>
+texto,&nbsp;qualquer&nbsp;texto&nbsp;além&nbsp;traz&nbsp;grandes&nbsp;riscos&nbsp;da&nbsp;função&nbsp;não&nbsp;funcionar&nbsp;e&nbsp;retornar&nbsp;<br>
+um&nbsp;erro&nbsp;de&nbsp;sintaxe.&nbsp;Passar&nbsp;cores&nbsp;com&nbsp;sintaxe&nbsp;inadequada&nbsp;também&nbsp;retornará&nbsp;um&nbsp;erro.</span></dd></dl>
+ <dl><dt><a name="-text_color"><strong>text_color</strong></a>(isArquivo, filename)</dt><dd><span class="code">Esta&nbsp;função&nbsp;pinta&nbsp;o&nbsp;texto&nbsp;recebido&nbsp;utilizando&nbsp;a&nbsp;biblioteca&nbsp;Rich&nbsp;do&nbsp;Python<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Para&nbsp;ela&nbsp;funcionar,&nbsp;precisa&nbsp;de&nbsp;dois&nbsp;argumentos&nbsp;iniciais:&nbsp;isArquivo&nbsp;(booleano)<br>
+e&nbsp;filename&nbsp;(string).&nbsp;isArquivo&nbsp;é&nbsp;para&nbsp;dizer&nbsp;se&nbsp;a&nbsp;string&nbsp;recebida&nbsp;é&nbsp;um&nbsp;caminho&nbsp;de&nbsp;<br>
+arquivo&nbsp;ou&nbsp;apenas&nbsp;uma&nbsp;string&nbsp;qualquer.&nbsp;Caso&nbsp;seja&nbsp;um&nbsp;caminho&nbsp;de&nbsp;arquivo,&nbsp;a&nbsp;função<br>
+lê&nbsp;o&nbsp;arquivo&nbsp;e&nbsp;aplica&nbsp;a&nbsp;estilização&nbsp;sobre&nbsp;o&nbsp;texto&nbsp;do&nbsp;arquivo.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Quando&nbsp;executada&nbsp;ela&nbsp;exige&nbsp;que&nbsp;digite&nbsp;uma&nbsp;cor&nbsp;para&nbsp;pintar&nbsp;o&nbsp;texto,&nbsp;a&nbsp;cor&nbsp;pode&nbsp;<br>
+ser&nbsp;passada&nbsp;de&nbsp;três&nbsp;fomas:&nbsp;código&nbsp;hexadecimal,&nbsp;rgb&nbsp;e&nbsp;"color&nbsp;tag".&nbsp;A&nbsp;seguir&nbsp;tem&nbsp;exem-<br>
+plos&nbsp;de&nbsp;sintaxe&nbsp;para&nbsp;cor&nbsp;branco&nbsp;para&nbsp;código&nbsp;hexadecimal,&nbsp;rgb&nbsp;e&nbsp;"color&nbsp;tag",&nbsp;respe-<br>
+ctivamente:&nbsp;#ffffff,&nbsp;rgb(255,&nbsp;255,&nbsp;255),&nbsp;white.&nbsp;Na&nbsp;biblioteca&nbsp;rich&nbsp;há&nbsp;256&nbsp;cores<br>
+padrão&nbsp;que&nbsp;são&nbsp;nomeadas&nbsp;com&nbsp;"color&nbsp;tag",&nbsp;para&nbsp;conhecê-las&nbsp;acesse&nbsp;o&nbsp;link&nbsp;abaixo:<br>
+&nbsp;<br>
+<a href="https://rich.readthedocs.io/en/stable/appendix/colors.html">https://rich.readthedocs.io/en/stable/appendix/colors.html</a><br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;verdade&nbsp;é&nbsp;que&nbsp;esta&nbsp;função&nbsp;é&nbsp;simples&nbsp;e&nbsp;apenas&nbsp;passa&nbsp;a&nbsp;string&nbsp;que&nbsp;ela&nbsp;solicita<br>
+como&nbsp;cor&nbsp;e&nbsp;aplica&nbsp;ela&nbsp;na&nbsp;propriedade&nbsp;style&nbsp;que&nbsp;vai&nbsp;estilizar&nbsp;o&nbsp;texto,&nbsp;logo,&nbsp;ao&nbsp;<br>
+passar&nbsp;uma&nbsp;cor&nbsp;que&nbsp;não&nbsp;existe&nbsp;na&nbsp;biblioteca&nbsp;rich&nbsp;ou&nbsp;passá-la&nbsp;com&nbsp;erro&nbsp;de&nbsp;sintaxe<br>
+será&nbsp;retornado&nbsp;um&nbsp;erro&nbsp;da&nbsp;biblioteca.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Porém,&nbsp;isso&nbsp;também&nbsp;significa&nbsp;que,&nbsp;se&nbsp;você&nbsp;desejar,&nbsp;é&nbsp;possível&nbsp;aplicar&nbsp;outras&nbsp;<br>
+estilizações&nbsp;sobre&nbsp;o&nbsp;texto&nbsp;que&nbsp;não&nbsp;sejam&nbsp;a&nbsp;cor&nbsp;propriamente&nbsp;dita.&nbsp;Caso&nbsp;deseje&nbsp;des-<br>
+cobrir&nbsp;como&nbsp;estilizar&nbsp;o&nbsp;texto&nbsp;de&nbsp;outras&nbsp;formas&nbsp;digite:<br>
+&nbsp;<br>
+"python3&nbsp;-m&nbsp;rich.default_styles"</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>console</strong> = &lt;console width=129 ColorSystem.TRUECOLOR&gt;</td></tr></table>
+</body></html>

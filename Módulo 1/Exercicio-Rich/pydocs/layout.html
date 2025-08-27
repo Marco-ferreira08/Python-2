@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module layout</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">layout</strong></td>
+
+    <p><span class="code">Este&nbsp;módulo&nbsp;possui&nbsp;funções&nbsp;que&nbsp;mudam&nbsp;o&nbsp;layout&nbsp;de&nbsp;como&nbsp;strings&nbsp;e&nbsp;conteúdos&nbsp;de&nbsp;arquivos&nbsp;<br>
+são&nbsp;impressos&nbsp;no&nbsp;terminal<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;módulo&nbsp;utiliza&nbsp;recursos&nbsp;da&nbsp;biblioteca&nbsp;Rich&nbsp;do&nbsp;Python,&nbsp;logo&nbsp;é&nbsp;estritamente&nbsp;necessário<br>
+que&nbsp;tenha&nbsp;a&nbsp;biblioteca&nbsp;instalada&nbsp;em&nbsp;sua&nbsp;máquina.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Há&nbsp;duas&nbsp;funções&nbsp;neste&nbsp;módulo:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;one_column&nbsp;=&nbsp;imprime&nbsp;sua&nbsp;string&nbsp;ou&nbsp;texto&nbsp;de&nbsp;arquivo&nbsp;em&nbsp;uma&nbsp;coluna<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;two_cloumn&nbsp;=&nbsp;imprime&nbsp;sua&nbsp;string&nbsp;ou&nbsp;texto&nbsp;de&nbsp;arquivo&nbsp;em&nbsp;duas&nbsp;colunas</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="personalizador.progresso.html">personalizador.progresso</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-one_column"><strong>one_column</strong></a>(isArquivo, filename)</dt><dd><span class="code">Esta&nbsp;função&nbsp;imprime&nbsp;a&nbsp;string&nbsp;recebida&nbsp;ou&nbsp;o&nbsp;texto&nbsp;do&nbsp;arquivo&nbsp;em&nbsp;coluna&nbsp;única<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;função&nbsp;recebe&nbsp;dois&nbsp;argumentos:&nbsp;isArquivo&nbsp;(booleano)&nbsp;filename&nbsp;(string).&nbsp;IsArquivo<br>
+indica&nbsp;que&nbsp;a&nbsp;string&nbsp;recebida&nbsp;é&nbsp;um&nbsp;arquivo,&nbsp;para&nbsp;assim&nbsp;imprimir&nbsp;seu&nbsp;conteúdo&nbsp;em&nbsp;layout<br>
+de&nbsp;uma&nbsp;coluna,&nbsp;além&nbsp;do&nbsp;seu&nbsp;caminho&nbsp;no&nbsp;topo&nbsp;dentro&nbsp;de&nbsp;um&nbsp;painel.&nbsp;Caso&nbsp;a&nbsp;string&nbsp;não&nbsp;seja<br>
+indicada&nbsp;como&nbsp;caminho&nbsp;de&nbsp;arquivo,&nbsp;a&nbsp;função&nbsp;simplesmente&nbsp;a&nbsp;imprime&nbsp;dentro&nbsp;de&nbsp;um&nbsp;painel.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ATENÇÃO:&nbsp;Não&nbsp;passe&nbsp;como&nbsp;argumento&nbsp;arquivos&nbsp;cujo&nbsp;conteúdo&nbsp;não&nbsp;caiba&nbsp;inteiro&nbsp;no&nbsp;terminal<br>
+em&nbsp;tela&nbsp;cheia,&nbsp;caso&nbsp;contrário&nbsp;este&nbsp;será&nbsp;impresso&nbsp;de&nbsp;forma&nbsp;incompleta.</span></dd></dl>
+ <dl><dt><a name="-two_column"><strong>two_column</strong></a>(isArquivo, filename)</dt><dd><span class="code">Esta&nbsp;função&nbsp;imprime&nbsp;a&nbsp;string&nbsp;recebida&nbsp;ou&nbsp;&nbsp;o&nbsp;texto&nbsp;do&nbsp;arquivo&nbsp;em&nbsp;duas&nbsp;colunas<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;função&nbsp;recebe&nbsp;dois&nbsp;argumentos:&nbsp;isArquivo&nbsp;(booleano)&nbsp;filename&nbsp;(string).&nbsp;IsArquivo<br>
+indica&nbsp;que&nbsp;a&nbsp;string&nbsp;recebida&nbsp;é&nbsp;um&nbsp;arquivo,&nbsp;para&nbsp;assim&nbsp;imprimir&nbsp;seu&nbsp;conteúdo&nbsp;em&nbsp;layout<br>
+de&nbsp;duas&nbsp;colunas,&nbsp;além&nbsp;do&nbsp;seu&nbsp;caminho&nbsp;no&nbsp;topo&nbsp;dentro&nbsp;de&nbsp;um&nbsp;painel.&nbsp;Caso&nbsp;a&nbsp;string&nbsp;não&nbsp;<br>
+seja&nbsp;indicada&nbsp;como&nbsp;caminho&nbsp;de&nbsp;arquivo,&nbsp;a&nbsp;função&nbsp;irá&nbsp;repartir&nbsp;a&nbsp;string&nbsp;em&nbsp;palavras,<br>
+imprimindo&nbsp;metade&nbsp;das&nbsp;palavras&nbsp;na&nbsp;primeira&nbsp;coluna&nbsp;e&nbsp;metade&nbsp;na&nbsp;segunda.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ATENÇÃO:&nbsp;Não&nbsp;passe&nbsp;como&nbsp;argumento&nbsp;arquivos&nbsp;cujo&nbsp;conteúdo&nbsp;não&nbsp;caiba&nbsp;inteiro&nbsp;no&nbsp;terminal<br>
+em&nbsp;tela&nbsp;cheia,&nbsp;caso&nbsp;contrário&nbsp;este&nbsp;será&nbsp;impresso&nbsp;de&nbsp;forma&nbsp;incompleta&nbsp;e&nbsp;quebrada.</span></dd></dl>
+</td></tr></table>
+</body></html>
