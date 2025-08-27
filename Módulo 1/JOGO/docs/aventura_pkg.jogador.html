@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module jogador</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">jogador</strong></td>
+
+    <p><span class="code">Aglutina&nbsp;funções&nbsp;relacionadas&nbsp;a&nbsp;dados&nbsp;e&nbsp;ações&nbsp;do&nbsp;jogador<br>
+&nbsp;<br>
+Necessita&nbsp;das&nbsp;seguintes&nbsp;bibliotecas&nbsp;e&nbsp;módulos:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;json&nbsp;-&nbsp;biblioteca&nbsp;nativa&nbsp;do&nbsp;python<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;pynput&nbsp;-&nbsp;biblioteca&nbsp;externa&nbsp;para&nbsp;leitura&nbsp;do&nbsp;teclado&nbsp;(pip&nbsp;install&nbsp;pynput)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;labirinto&nbsp;-&nbsp;módulo&nbsp;do&nbsp;pacote&nbsp;aventura_pkg&nbsp;como&nbsp;o&nbsp;próprio&nbsp;módulo&nbsp;jogador<br>
+&nbsp;<br>
+&nbsp;<br>
+Funções:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;salva_jogador<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_character<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_position<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_status<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_steps<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_score<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;iniciar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;pontuar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;mover</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="pynput.keyboard.html">pynput.keyboard</a><br>
+</td><td class="multicolumn"><a href="aventura_pkg.labirinto.html">aventura_pkg.labirinto</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-get_character"><strong>get_character</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;o&nbsp;personagem&nbsp;(character&nbsp;str())</span></dd></dl>
+ <dl><dt><a name="-get_position"><strong>get_position</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;suas&nbsp;coordenadas&nbsp;(position&nbsp;list())</span></dd></dl>
+ <dl><dt><a name="-get_score"><strong>get_score</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;a&nbsp;pontuação&nbsp;(score&nbsp;int())</span></dd></dl>
+ <dl><dt><a name="-get_status"><strong>get_status</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;o&nbsp;seu&nbsp;status&nbsp;(status&nbsp;str())</span></dd></dl>
+ <dl><dt><a name="-get_steps"><strong>get_steps</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;o&nbsp;número&nbsp;de&nbsp;passos&nbsp;(steps&nbsp;int())</span></dd></dl>
+ <dl><dt><a name="-iniciar"><strong>iniciar</strong></a>(maze, pontos, character)</dt><dd><span class="code">Posiciona&nbsp;o&nbsp;jogador&nbsp;no&nbsp;início&nbsp;do&nbsp;labirinto&nbsp;e&nbsp;salva&nbsp;os&nbsp;seus&nbsp;e&nbsp;os&nbsp;dados&nbsp;do&nbsp;labirinto<br>
+&nbsp;<br>
+Argumentos:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;maze&nbsp;list()&nbsp;:&nbsp;lista&nbsp;de&nbsp;listas&nbsp;contendo&nbsp;o&nbsp;labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;pontos&nbsp;list()&nbsp;:&nbsp;lista&nbsp;de&nbsp;listas&nbsp;contendo&nbsp;coordenadas&nbsp;de&nbsp;tesouros&nbsp;no&nbsp;labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;character&nbsp;str()&nbsp;:&nbsp;personagem&nbsp;do&nbsp;jogador<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;coloca&nbsp;o&nbsp;personagem&nbsp;do&nbsp;jogador&nbsp;jo&nbsp;canto&nbsp;superior&nbsp;esquerdo&nbsp;do&nbsp;labirinto,<br>
+além&nbsp;disso,&nbsp;salva&nbsp;os&nbsp;dados&nbsp;do&nbsp;jogador,&nbsp;iniciando&nbsp;seus&nbsp;passos&nbsp;e&nbsp;pontuação&nbsp;como&nbsp;0<br>
+e&nbsp;sua&nbsp;posição/coordenadas&nbsp;como&nbsp;[1,&nbsp;1].&nbsp;Como&nbsp;ele&nbsp;modifica&nbsp;o&nbsp;labirinto&nbsp;posicionando<br>
+o&nbsp;personagem,&nbsp;a&nbsp;função&nbsp;também&nbsp;o&nbsp;salva,&nbsp;passando&nbsp;o&nbsp;labirinto&nbsp;modificado&nbsp;e&nbsp;os&nbsp;pontos<br>
+como&nbsp;argumentos</span></dd></dl>
+ <dl><dt><a name="-mover"><strong>mover</strong></a>(key)</dt><dd><span class="code">Move&nbsp;o&nbsp;jogador&nbsp;pelo&nbsp;labirinto&nbsp;verificando&nbsp;se&nbsp;ele&nbsp;coletou&nbsp;um&nbsp;tesouro&nbsp;ou&nbsp;se&nbsp;conseguiu&nbsp;escapar<br>
+&nbsp;<br>
+Argumento:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;key&nbsp;pynput.keyboard.Key()&nbsp;ou&nbsp;pynput.keyboard.KeyCode()&nbsp;:&nbsp;tecla&nbsp;pressionada<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pelo&nbsp;jogador,&nbsp;podendo&nbsp;ser&nbsp;uma&nbsp;tecla&nbsp;de&nbsp;texto&nbsp;(KeyCode())&nbsp;ou&nbsp;uma&nbsp;tecla&nbsp;especial&nbsp;(Key())&nbsp;<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;verifica&nbsp;se&nbsp;a&nbsp;tecla&nbsp;pressionada&nbsp;pelo&nbsp;jogador&nbsp;(a&nbsp;qual&nbsp;é&nbsp;recebida&nbsp;como&nbsp;<br>
+argumento)&nbsp;é&nbsp;uma&nbsp;das&nbsp;tecla&nbsp;direcionais&nbsp;(wasd)&nbsp;ou&nbsp;se&nbsp;é&nbsp;uma&nbsp;das&nbsp;teclas&nbsp;com&nbsp;funções<br>
+especiais&nbsp;no&nbsp;jogo,&nbsp;como&nbsp;o&nbsp;Esc,&nbsp;que&nbsp;faz&nbsp;o&nbsp;jogador&nbsp;sair&nbsp;da&nbsp;partida,&nbsp;ou&nbsp;o&nbsp;espaço,<br>
+o&nbsp;qual&nbsp;faz&nbsp;o&nbsp;jogador&nbsp;sair&nbsp;do&nbsp;labirinto&nbsp;caso&nbsp;o&nbsp;mesmo&nbsp;esteja&nbsp;na&nbsp;saída.<br>
+&nbsp;<br>
+Sempre&nbsp;que&nbsp;o&nbsp;jogador&nbsp;aperta&nbsp;uma&nbsp;tecla&nbsp;direcional,&nbsp;a&nbsp;função&nbsp;posiciona&nbsp;o&nbsp;seu&nbsp;personagem<br>
+na&nbsp;nova&nbsp;posição&nbsp;e&nbsp;o&nbsp;remove&nbsp;da&nbsp;função&nbsp;anterior.&nbsp;Em&nbsp;seguida&nbsp;ela&nbsp;salva&nbsp;seus&nbsp;novos&nbsp;dados,<br>
+como&nbsp;número&nbsp;de&nbsp;passos&nbsp;e&nbsp;coordenadas.&nbsp;Ela&nbsp;também&nbsp;verifica&nbsp;se&nbsp;o&nbsp;jogador&nbsp;está&nbsp;na&nbsp;mesma<br>
+posição&nbsp;de&nbsp;que&nbsp;algum&nbsp;tesouro,&nbsp;atualizando&nbsp;sua&nbsp;pontuação&nbsp;e&nbsp;removendo-o&nbsp;da&nbsp;lista&nbsp;de<br>
+tesouros&nbsp;a&nbsp;serem&nbsp;coletados.</span></dd></dl>
+ <dl><dt><a name="-pontuar"><strong>pontuar</strong></a>(isEnd=False)</dt><dd><span class="code">Retorna&nbsp;a&nbsp;pontuação&nbsp;do&nbsp;jogador&nbsp;após&nbsp;coletar&nbsp;um&nbsp;tesouro&nbsp;ou&nbsp;escapar&nbsp;do&nbsp;labirinto<br>
+&nbsp;<br>
+Parâmetro:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;isEnd&nbsp;bool()&nbsp;(opcional&nbsp;=&nbsp;False)&nbsp;:&nbsp;indicativo&nbsp;se&nbsp;a&nbsp;função&nbsp;deve&nbsp;calcular&nbsp;a&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pontuação&nbsp;final&nbsp;do&nbsp;jogador<br>
+&nbsp;<br>
+Quando&nbsp;o&nbsp;valor&nbsp;isEnd&nbsp;é&nbsp;False,&nbsp;significa&nbsp;que&nbsp;o&nbsp;jogador&nbsp;apenas&nbsp;coletou&nbsp;um&nbsp;tesouro,<br>
+logo,&nbsp;a&nbsp;função&nbsp;simplesmente&nbsp;retorna&nbsp;a&nbsp;pontuação&nbsp;atual&nbsp;do&nbsp;jogador&nbsp;somada&nbsp;a&nbsp;500.<br>
+&nbsp;<br>
+Quando&nbsp;o&nbsp;valor&nbsp;isEnd&nbsp;é&nbsp;True,&nbsp;significa&nbsp;que&nbsp;o&nbsp;jogador&nbsp;escapou&nbsp;do&nbsp;labirinto.&nbsp;Assim<br>
+é&nbsp;feito&nbsp;um&nbsp;cálculo&nbsp;em&nbsp;cima&nbsp;do&nbsp;tamanho&nbsp;da&nbsp;área&nbsp;do&nbsp;labirinto&nbsp;e&nbsp;o&nbsp;número&nbsp;de&nbsp;passos<br>
+dados&nbsp;pelo&nbsp;jogador,&nbsp;de&nbsp;modo&nbsp;que,&nbsp;quanto&nbsp;mais&nbsp;passos,&nbsp;menor&nbsp;é&nbsp;a&nbsp;pontuação.&nbsp;Então<br>
+a&nbsp;função&nbsp;retorna&nbsp;esse&nbsp;valor&nbsp;calculado&nbsp;somado&nbsp;à&nbsp;pontuação&nbsp;do&nbsp;jogador.</span></dd></dl>
+ <dl><dt><a name="-salva_jogador"><strong>salva_jogador</strong></a>(character, position, steps, score, status='in_game')</dt><dd><span class="code">Salva&nbsp;os&nbsp;dados&nbsp;do&nbsp;jogador&nbsp;em&nbsp;um&nbsp;arquivo&nbsp;json&nbsp;(player_data.json)<br>
+&nbsp;<br>
+Argumentos:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;character&nbsp;str()&nbsp;:&nbsp;personagem&nbsp;do&nbsp;jogador,&nbsp;o&nbsp;qual&nbsp;contém&nbsp;1&nbsp;ou&nbsp;três&nbsp;caracteres<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;position&nbsp;list()&nbsp;:&nbsp;coordenadas&nbsp;do&nbsp;jogador&nbsp;no&nbsp;labirinto,&nbsp;representadas&nbsp;por&nbsp;uma&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lista&nbsp;de&nbsp;dois&nbsp;números&nbsp;int()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;steps&nbsp;int()&nbsp;:&nbsp;número&nbsp;de&nbsp;passos&nbsp;dados&nbsp;pelo&nbsp;jogador&nbsp;no&nbsp;labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;score&nbsp;int()&nbsp;:&nbsp;pontuação&nbsp;do&nbsp;jogador<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;status&nbsp;str()&nbsp;(opcional&nbsp;=&nbsp;'in_game')&nbsp;:&nbsp;estado&nbsp;do&nbsp;jogador&nbsp;que&nbsp;varia&nbsp;entre&nbsp;win,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit&nbsp;e&nbsp;in_game<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+A&nbsp;função&nbsp;cria&nbsp;um&nbsp;dicionário&nbsp;com&nbsp;os&nbsp;dados&nbsp;acima&nbsp;e&nbsp;escreve&nbsp;um&nbsp;arquivo&nbsp;json&nbsp;dentro<br>
+da&nbsp;pasta&nbsp;data/dinamic,&nbsp;nomeado&nbsp;como&nbsp;player_data.json</span></dd></dl>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module labirinto</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">labirinto</strong></td>
+
+Necessita&nbsp;das&nbsp;seguintes&nbsp;bibliotecas&nbsp;e&nbsp;módulos:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;json&nbsp;-&nbsp;módulo&nbsp;nativo&nbsp;do&nbsp;python<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;sleep&nbsp;-&nbsp;módulo&nbsp;nativo&nbsp;do&nbsp;python<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;random&nbsp;-&nbsp;módulo&nbsp;nativo&nbsp;do&nbsp;python<br>
+&nbsp;<br>
+&nbsp;<br>
+Funções:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;salva_labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_fim<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_pontos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;gerar_labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;gerar_pontos<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;montar_labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;imprimir_labirinto</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="random.html">random</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-gerar_labirinto"><strong>gerar_labirinto</strong></a>(path)</dt><dd><span class="code">Lê&nbsp;um&nbsp;arquivo&nbsp;de&nbsp;texto&nbsp;que&nbsp;contenha&nbsp;um&nbsp;labirinto&nbsp;e&nbsp;retorna&nbsp;lista&nbsp;de&nbsp;listas&nbsp;do&nbsp;labirinto<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;recebe&nbsp;path&nbsp;str()&nbsp;como&nbsp;argumento,&nbsp;que&nbsp;é&nbsp;o&nbsp;caminho&nbsp;do&nbsp;arquivo&nbsp;e&nbsp;retorna&nbsp;uma&nbsp;<br>
+lista&nbsp;de&nbsp;listas&nbsp;que&nbsp;representa&nbsp;o&nbsp;labirinto.<br>
+&nbsp;<br>
+Quando&nbsp;a&nbsp;função&nbsp;não&nbsp;encontra&nbsp;o&nbsp;arquivo,&nbsp;ela&nbsp;lê&nbsp;por&nbsp;padrão&nbsp;o&nbsp;labirinto_medio.txt&nbsp;o&nbsp;<br>
+qual&nbsp;está&nbsp;na&nbsp;pasta&nbsp;data/labirintos.<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;lê&nbsp;a&nbsp;string&nbsp;do&nbsp;labirinto&nbsp;dentro&nbsp;do&nbsp;arquivo,&nbsp;quebra&nbsp;em&nbsp;linhas&nbsp;que&nbsp;são&nbsp;<br>
+adicionadas&nbsp;a&nbsp;uma&nbsp;lista.&nbsp;Depois&nbsp;cada&nbsp;linha&nbsp;é&nbsp;quebrada&nbsp;em&nbsp;uma&nbsp;lista&nbsp;de&nbsp;strings<br>
+seguido&nbsp;uma&nbsp;lógica&nbsp;matemática,&nbsp;de&nbsp;modo&nbsp;que&nbsp;a&nbsp;cada&nbsp;4&nbsp;caracteres&nbsp;ela&nbsp;gera&nbsp;2<br>
+strings.&nbsp;Exemplo:<br>
+&nbsp;<br>
+Exemplo&nbsp;1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string1&nbsp;=&nbsp;"+---"&nbsp;=&gt;&nbsp;"+"&nbsp;e&nbsp;"---"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string2&nbsp;=&nbsp;"|&nbsp;&nbsp;&nbsp;"&nbsp;=&gt;&nbsp;"|"&nbsp;e&nbsp;"&nbsp;&nbsp;&nbsp;"<br>
+&nbsp;<br>
+Exemplo&nbsp;2:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string1&nbsp;=&nbsp;"+---+---+&nbsp;&nbsp;&nbsp;+"&nbsp;=&gt;&nbsp;"+",&nbsp;"---",&nbsp;"+",&nbsp;"---",&nbsp;"+",&nbsp;"&nbsp;&nbsp;&nbsp;"&nbsp;e&nbsp;"+"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string2&nbsp;=&nbsp;"|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|"&nbsp;=&gt;&nbsp;"|",&nbsp;"&nbsp;&nbsp;&nbsp;",&nbsp;"|",&nbsp;"&nbsp;&nbsp;&nbsp;",&nbsp;"&nbsp;",&nbsp;"&nbsp;&nbsp;&nbsp;"&nbsp;e&nbsp;"|"<br>
+&nbsp;<br>
+Ela&nbsp;se&nbsp;comporta&nbsp;desse&nbsp;modo&nbsp;para&nbsp;separar&nbsp;as&nbsp;"paredes"&nbsp;do&nbsp;labrinto&nbsp;dos&nbsp;espaços<br>
+em&nbsp;que&nbsp;o&nbsp;jogador&nbsp;pode&nbsp;"andar",&nbsp;além&nbsp;de&nbsp;separar&nbsp;as&nbsp;paredes&nbsp;horizontais&nbsp;das<br>
+divisórias.</span></dd></dl>
+ <dl><dt><a name="-gerar_pontos"><strong>gerar_pontos</strong></a>(maze)</dt><dd><span class="code">Gera&nbsp;coordenadas&nbsp;de&nbsp;tesouros&nbsp;no&nbsp;labirinto&nbsp;dependendo&nbsp;de&nbsp;seu&nbsp;tamanho<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;recebe&nbsp;um&nbsp;labirinto&nbsp;no&nbsp;formato&nbsp;de&nbsp;lista&nbsp;de&nbsp;listas&nbsp;e&nbsp;retorna&nbsp;outra&nbsp;lista&nbsp;<br>
+de&nbsp;listas,&nbsp;que&nbsp;contêm&nbsp;as&nbsp;coordenadas&nbsp;de&nbsp;tesouros&nbsp;no&nbsp;labirinto&nbsp;em&nbsp;questão.<br>
+&nbsp;<br>
+O&nbsp;número&nbsp;de&nbsp;tesouros&nbsp;gerados&nbsp;depende&nbsp;do&nbsp;tamanho&nbsp;do&nbsp;labirinto,&nbsp;sendo&nbsp;que&nbsp;esse&nbsp;número<br>
+é&nbsp;resultado&nbsp;da&nbsp;divisão&nbsp;da&nbsp;área&nbsp;do&nbsp;labirinto&nbsp;(levando&nbsp;em&nbsp;consideração&nbsp;o&nbsp;número&nbsp;de&nbsp;<br>
+casas)&nbsp;por&nbsp;25.&nbsp;Porém,&nbsp;cada&nbsp;labirinto&nbsp;tem&nbsp;que&nbsp;ter&nbsp;no&nbsp;mínimo&nbsp;1&nbsp;tesouro.<br>
+&nbsp;<br>
+Não&nbsp;podem&nbsp;ser&nbsp;gerados&nbsp;pontos&nbsp;no&nbsp;cando&nbsp;superior&nbsp;esquerdo&nbsp;nem&nbsp;no&nbsp;canto&nbsp;inferior<br>
+direito,&nbsp;pois,&nbsp;essas&nbsp;são&nbsp;a&nbsp;posição&nbsp;inicial&nbsp;do&nbsp;jogador&nbsp;a&nbsp;posição&nbsp;da&nbsp;saída,&nbsp;<br>
+respectivamente</span></dd></dl>
+ <dl><dt><a name="-get_fim"><strong>get_fim</strong></a>()</dt><dd><span class="code">Retorna&nbsp;as&nbsp;coordenadas&nbsp;do&nbsp;canto&nbsp;inferior&nbsp;direito&nbsp;do&nbsp;labirinto,&nbsp;que&nbsp;é&nbsp;a&nbsp;saída&nbsp;<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;não&nbsp;requer&nbsp;argumentos,&nbsp;porém,&nbsp;é&nbsp;necessário&nbsp;que&nbsp;o&nbsp;arquivo&nbsp;labirinto_data.json<br>
+exista&nbsp;e&nbsp;possua&nbsp;dados&nbsp;atualizados&nbsp;do&nbsp;labirinto.'</span></dd></dl>
+ <dl><dt><a name="-get_labirinto"><strong>get_labirinto</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;o&nbsp;labirinto&nbsp;(maze&nbsp;list())</span></dd></dl>
+ <dl><dt><a name="-get_pontos"><strong>get_pontos</strong></a>()</dt><dd><span class="code">Abre&nbsp;o&nbsp;arquivo&nbsp;json&nbsp;do&nbsp;jogador&nbsp;e&nbsp;retorna&nbsp;a&nbsp;lista&nbsp;de&nbsp;pontos&nbsp;(pontos&nbsp;list())</span></dd></dl>
+ <dl><dt><a name="-imprimir_labirinto"><strong>imprimir_labirinto</strong></a>(maze)</dt><dd><span class="code">Converte&nbsp;o&nbsp;labirinto&nbsp;em&nbsp;uma&nbsp;string<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;recebe&nbsp;um&nbsp;labirinto&nbsp;em&nbsp;formato&nbsp;de&nbsp;lista&nbsp;de&nbsp;listas&nbsp;e&nbsp;retorna&nbsp;o&nbsp;mesmo&nbsp;em&nbsp;<br>
+formato&nbsp;de&nbsp;string,&nbsp;para&nbsp;que&nbsp;possa&nbsp;ser&nbsp;impresso&nbsp;na&nbsp;tela&nbsp;com&nbsp;facilidade.</span></dd></dl>
+ <dl><dt><a name="-montar_labirinto"><strong>montar_labirinto</strong></a>(maze)</dt><dd><span class="code">Posiciona&nbsp;a&nbsp;saída&nbsp;e&nbsp;os&nbsp;tesouros&nbsp;do&nbsp;labirinto<br>
+&nbsp;<br>
+Recebe&nbsp;um&nbsp;labirinto&nbsp;no&nbsp;formato&nbsp;de&nbsp;lista&nbsp;de&nbsp;listas&nbsp;e&nbsp;retorna&nbsp;outra&nbsp;lista&nbsp;de&nbsp;listas<br>
+do&nbsp;labirinto&nbsp;modificado.<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;simplesmente&nbsp;coloca&nbsp;"[O]"&nbsp;na&nbsp;saída&nbsp;do&nbsp;labirinto&nbsp;e&nbsp;"&nbsp;$&nbsp;"&nbsp;nas&nbsp;posições&nbsp;em<br>
+que&nbsp;estão&nbsp;os&nbsp;tesouros.</span></dd></dl>
+ <dl><dt><a name="-salva_labirinto"><strong>salva_labirinto</strong></a>(maze, pontos)</dt><dd><span class="code">Salva&nbsp;os&nbsp;dados&nbsp;do&nbsp;labirinto&nbsp;em&nbsp;um&nbsp;arquivo&nbsp;json&nbsp;(labirinto_data.json)<br>
+&nbsp;<br>
+Argumentos:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;maze&nbsp;list()&nbsp;:&nbsp;lista&nbsp;de&nbsp;listas&nbsp;contendo&nbsp;o&nbsp;labirinto&nbsp;dividido&nbsp;em&nbsp;linhas<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;pontos&nbsp;list()&nbsp;:&nbsp;coordenadas&nbsp;de&nbsp;tesouros&nbsp;no&nbsp;labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+A&nbsp;função&nbsp;cria&nbsp;um&nbsp;dicionário&nbsp;com&nbsp;os&nbsp;dados&nbsp;acima&nbsp;e&nbsp;escreve&nbsp;um&nbsp;arquivo&nbsp;json&nbsp;dentro<br>
+da&nbsp;pasta&nbsp;data/dinamic,&nbsp;nomeado&nbsp;como&nbsp;labirinto_data.json.&nbsp;Ela&nbsp;tem&nbsp;um&nbsp;papel&nbsp;importante,<br>
+já&nbsp;que&nbsp;o&nbsp;labirinto&nbsp;e&nbsp;a&nbsp;lista&nbsp;de&nbsp;pontos&nbsp;são&nbsp;constantemente&nbsp;atualizadas&nbsp;durante&nbsp;a<br>
+execução&nbsp;do&nbsp;jogo.</span></dd></dl>
+</td></tr></table>
+</body></html>

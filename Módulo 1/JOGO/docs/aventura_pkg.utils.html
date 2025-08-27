@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module utils</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">utils</strong></td>
+
+Necessita&nbsp;das&nbsp;seguintes&nbsp;bibliotecas&nbsp;e&nbsp;módulos:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;sleep&nbsp;-&nbsp;biclioteca&nbsp;nativa&nbsp;do&nbsp;python<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;rich&nbsp;-&nbsp;biblioteca&nbsp;externa&nbsp;para&nbsp;estilização&nbsp;do&nbsp;terminal&nbsp;(pip&nbsp;&nbsp;install&nbsp;rich)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;labirinto&nbsp;-&nbsp;módulo&nbsp;do&nbsp;pacote&nbsp;aventura_pkg&nbsp;como&nbsp;o&nbsp;próprio&nbsp;utils<br>
+&nbsp;<br>
+&nbsp;<br>
+Funções:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;win_screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;end_screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;initial_screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;get_instrucoes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;--&gt;&nbsp;resolve_maze</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="aventura_pkg.labirinto.html">aventura_pkg.labirinto</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-end_screen"><strong>end_screen</strong></a>()</dt><dd><span class="code">Retorna&nbsp;a&nbsp;tela&nbsp;de&nbsp;derrota&nbsp;do&nbsp;jogo<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;lê&nbsp;o&nbsp;arquivo&nbsp;game-over.txt&nbsp;na&nbsp;pasta&nbsp;data/screens&nbsp;e&nbsp;retorna&nbsp;o&nbsp;seu<br>
+conteúdo&nbsp;(a&nbsp;tela&nbsp;de&nbsp;game&nbsp;over)&nbsp;em&nbsp;forma&nbsp;de&nbsp;sting</span></dd></dl>
+ <dl><dt><a name="-get_intrucoes"><strong>get_intrucoes</strong></a>()</dt><dd><span class="code">Retorna&nbsp;as&nbsp;intruções&nbsp;do&nbsp;jogo<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;lê&nbsp;o&nbsp;arquivo&nbsp;instrucoes.txt&nbsp;na&nbsp;pasta&nbsp;data/screens&nbsp;e&nbsp;retorna&nbsp;o&nbsp;seu<br>
+conteúdo&nbsp;em&nbsp;forma&nbsp;de&nbsp;string.</span></dd></dl>
+ <dl><dt><a name="-initial_screen"><strong>initial_screen</strong></a>()</dt><dd><span class="code">Retorna&nbsp;a&nbsp;tela&nbsp;inicial&nbsp;do&nbsp;jogo<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;lê&nbsp;o&nbsp;arquivo&nbsp;menu.txt&nbsp;na&nbsp;pasta&nbsp;data/screens&nbsp;e&nbsp;retorna&nbsp;o&nbsp;seu<br>
+conteúdo&nbsp;(a&nbsp;tela&nbsp;do&nbsp;menu)&nbsp;em&nbsp;forma&nbsp;de&nbsp;sting</span></dd></dl>
+ <dl><dt><a name="-resolve_maze"><strong>resolve_maze</strong></a>(maze, position, past_list, live, layout, character, color)</dt><dd><span class="code">Algorítimo&nbsp;de&nbsp;árvore&nbsp;que&nbsp;anda&nbsp;por&nbsp;todo&nbsp;o&nbsp;labirinto&nbsp;testando&nbsp;todos&nbsp;os&nbsp;caminhos<br>
+&nbsp;<br>
+Argumentos:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;maze&nbsp;list()&nbsp;:&nbsp;lista&nbsp;de&nbsp;listas&nbsp;do&nbsp;labirinto<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;position&nbsp;list()&nbsp;:&nbsp;coordenadas&nbsp;atuais&nbsp;do&nbsp;algorítimo<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;past_list&nbsp;list()&nbsp;:&nbsp;lista&nbsp;de&nbsp;posições&nbsp;pelas&nbsp;quais&nbsp;o&nbsp;algorítmo&nbsp;já&nbsp;passou<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;live&nbsp;Live()&nbsp;:&nbsp;live&nbsp;display&nbsp;em&nbsp;execução&nbsp;oriundo&nbsp;da&nbsp;biblioteca&nbsp;rich.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acesse&nbsp;<a href="https://rich.readthedocs.io/en/stable/live.html">https://rich.readthedocs.io/en/stable/live.html</a>&nbsp;para&nbsp;mais&nbsp;informações<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;layout&nbsp;Layout()&nbsp;:&nbsp;layout&nbsp;do&nbsp;terminal&nbsp;oriundo&nbsp;da&nbsp;biblioteca&nbsp;rich.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acesse&nbsp;<a href="https://rich.readthedocs.io/en/stable/layout.html">https://rich.readthedocs.io/en/stable/layout.html</a>&nbsp;para&nbsp;mais&nbsp;informações<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;character&nbsp;str()&nbsp;:&nbsp;personagem&nbsp;que&nbsp;será&nbsp;exibido&nbsp;se&nbsp;movendo&nbsp;pelo&nbsp;labirinto.&nbsp;Pode<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;conter&nbsp;1&nbsp;ou&nbsp;três&nbsp;caracteres<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;color&nbsp;str()&nbsp;:&nbsp;string&nbsp;que&nbsp;contém&nbsp;estilização&nbsp;nas&nbsp;normas&nbsp;da&nbsp;biblioteca&nbsp;Rich.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acesse&nbsp;<a href="https://rich.readthedocs.io/en/stable/style.html">https://rich.readthedocs.io/en/stable/style.html</a>&nbsp;para&nbsp;mis&nbsp;informações<br>
+&nbsp;<br>
+ALERTA!&nbsp;Para&nbsp;que&nbsp;esta&nbsp;função&nbsp;funcione&nbsp;é&nbsp;necessário&nbsp;passar&nbsp;o&nbsp;objeto&nbsp;Live()&nbsp;do&nbsp;live<br>
+display&nbsp;em&nbsp;execução.&nbsp;Além&nbsp;disso,&nbsp;o&nbsp;layout&nbsp;passado&nbsp;como&nbsp;argumento&nbsp;deve&nbsp;conter&nbsp;a&nbsp;<br>
+subdivisão&nbsp;"main".<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;verifica&nbsp;se&nbsp;ela&nbsp;pode&nbsp;mover-se&nbsp;para&nbsp;cima,&nbsp;para&nbsp;esquerda,&nbsp;para&nbsp;baixo&nbsp;ou&nbsp;para<br>
+a&nbsp;direita.&nbsp;Essa&nbsp;verificação&nbsp;leva&nbsp;em&nbsp;conta&nbsp;paredes&nbsp;no&nbsp;labirinto&nbsp;e&nbsp;se&nbsp;ela&nbsp;já&nbsp;passou&nbsp;<br>
+por&nbsp;aquela&nbsp;posição.&nbsp;Ao&nbsp;indentificar&nbsp;que&nbsp;é&nbsp;possível&nbsp;mover-se&nbsp;para&nbsp;aquela&nbsp;direção<br>
+ela&nbsp;chama&nbsp;a&nbsp;si&nbsp;mesma&nbsp;e&nbsp;repete&nbsp;o&nbsp;processo.<br>
+&nbsp;<br>
+Quando&nbsp;é&nbsp;identificado&nbsp;que&nbsp;não&nbsp;é&nbsp;possível&nbsp;ir&nbsp;para&nbsp;nenhuma&nbsp;direção&nbsp;ela&nbsp;termina&nbsp;e&nbsp;a<br>
+função&nbsp;anterior&nbsp;verifica&nbsp;a&nbsp;póxima&nbsp;direção.&nbsp;Devido&nbsp;a&nbsp;esses&nbsp;fatores&nbsp;ela&nbsp;caracteriza-se<br>
+como&nbsp;uma&nbsp;função&nbsp;recursiva.</span></dd></dl>
+ <dl><dt><a name="-sleep"><strong>sleep</strong></a>(...)</dt><dd><span class="code"><a href="#-sleep">sleep</a>(seconds)<br>
+&nbsp;<br>
+Delay&nbsp;execution&nbsp;for&nbsp;a&nbsp;given&nbsp;number&nbsp;of&nbsp;seconds.&nbsp;&nbsp;The&nbsp;argument&nbsp;may&nbsp;be<br>
+a&nbsp;floating&nbsp;point&nbsp;number&nbsp;for&nbsp;subsecond&nbsp;precision.</span></dd></dl>
+ <dl><dt><a name="-win_screen"><strong>win_screen</strong></a>(score)</dt><dd><span class="code">Retorna&nbsp;a&nbsp;tela&nbsp;de&nbsp;vitória&nbsp;do&nbsp;jogo<br>
+&nbsp;<br>
+A&nbsp;função&nbsp;recebe&nbsp;como&nbsp;argumento&nbsp;a&nbsp;pontuação&nbsp;do&nbsp;jogador&nbsp;int()&nbsp;e&nbsp;retorna&nbsp;a&nbsp;tela&nbsp;de&nbsp;<br>
+vitória&nbsp;com&nbsp;a&nbsp;pontuação&nbsp;str()<br>
+&nbsp;<br>
+A&nbsp;tela&nbsp;em&nbsp;si&nbsp;está&nbsp;armazenada&nbsp;no&nbsp;arquivo&nbsp;win.txt&nbsp;na&nbsp;pasta&nbsp;data/screens,&nbsp;a&nbsp;função<br>
+apenas&nbsp;adiciona&nbsp;a&nbsp;pontuação&nbsp;retorna&nbsp;a&nbsp;nova&nbsp;string.</span></dd></dl>
+</td></tr></table>
+</body></html>

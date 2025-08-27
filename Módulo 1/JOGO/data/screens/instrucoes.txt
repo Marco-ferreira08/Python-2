@@ -1,0 +1,19 @@
+Guia de Aventura no Labirinto
+
+Seu objetivo no jogo é encontrar a saída indicada pelo símbolo [O], ao chegar na saída você deve apertar a tecla "espaço" para escapar do labirinto.
+
+Espalhado pelo mapa você pode encontrar tesouros indicados pelo símbolo $, os quais aumentarão em 500 pontos cada um sua pontuação final. A pontuação base depende de quantos movimentos você realizou, quanto mais movimentos, menor é a pontuação.  Porém, labirintos maiores dão mais pontos e possuem mais tesouros.
+
+Controles em jogo:
+
+W --> Andar para cima
+S --> Andar para baixo
+A --> Andar para a esquerda
+D --> Andar para a direita
+
+Esc --> Finaliza a partida instantaneamente
+
+
+Para inicializar o jogo é necessário passar como argumento o nome do arquivo que contém o labirinto, o qual deve estar dentro da pasta "labirintos". Caso o arquivo não exista, o programa irá utilizar o labirinto_medio.txt por padrão.
+
+Há diferentes parâmetros que podem ser passados, os quais mudam a execução do jogo e o seu visual. No terminal digite main.py -h ou main.py.__doc__ para mais detalhes.
