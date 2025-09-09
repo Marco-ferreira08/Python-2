@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href={{ url_for("static", filename="css/post.css") }}>
+{% endblock %}
+
+{% block content %}
+    
+    <main>
+        <div class="post-writing-page">
+            <h2>Escreva seu Post</h2>
+            <form action="" method="post">
+                <div>
+                    <textarea name="post_body" class="post-input" rows=8 maxlength=500 required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Postar</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

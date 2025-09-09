@@ -1,0 +1,52 @@
+.post-writing-page {
+    box-shadow: 1px 1px 1px var(--light-shadow);
+    border-radius: 15px;
+    background-color: var(--interface-bg-color);
+    padding: 18px;
+    margin: 30px auto;
+    width: 50%;
+}
+
+h2 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    margin-bottom: 12px;
+}
+
+form .post-input {
+    resize: none;
+    padding: 5px;
+
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.233);
+
+    font-size: 1rem;
+
+    width: 95%;
+}
+
+form .submit-button {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    margin-top: 20px;
+    padding: 4px;
+
+    border-radius: 15px;
+    background-color: var(--secundary-accent-color);
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .post-writing-page {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .post-writing-page {
+        width: 80%;
+    }
+}

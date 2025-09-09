@@ -1,0 +1,164 @@
+/** Vars do projeto */
+:root {
+    /* Lista de cores */
+    --main-bg-color: #eaeaea;
+    --interface-bg-color: #F8F8F8;
+    --main-font-color: #292929;
+    --primary-accent-color: #FF7417;
+    --secundary-accent-color: #556B2F;
+    --tertiary-accent-color: #006D77;
+    --light-shadow: rgba(0, 0, 0, 0.123);
+    
+    /* Lista de valores de fontes */
+    --main-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --main-font-title: 'Coolvetica', 'sans-serif';
+
+    /* Lista de variáveis importantes */
+    --header-height: 4.5rem;
+}
+
+/** CSS Geral do Projeto */
+body {
+    /* background-color: var(--main-bg-color); */
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
+    font-size: 18px;
+    font-family: var(--main-font-family);
+
+    padding-top: var(--header-height);
+}
+
+h1 {
+    font-family: var(--main-font-title);
+    font-size: 2.5rem;
+    display: inline-block;
+    margin: auto 20px;
+}
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: var(--primary-accent-color);
+    color: white;
+    height: var(--header-height);
+
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header nav > ul > li {
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+header a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+    font-family: var(--main-font-family);
+}
+
+header a:hover {
+    color: #fafafad2;
+}
+
+header nav > ul {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+nav {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.logged_nav_ul {
+    position: absolute;
+    right: 15px;
+}
+
+.fa {
+    font-family: "Font Awesome 5 Free";
+}
+
+.flashes {
+    margin-top: 20px;
+}
+
+.flashes > li {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.flashes > .error {
+    color: red;
+}
+
+.flashes > .success_message {
+    color: rgb(0, 172, 0);
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/Coolvetica.otf");
+}
+
+@media screen and (max-width: 758px) {
+    :root {
+        --header-height: 5.5rem;
+    }
+
+    nav {
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        height: var(--header-height);
+    }
+
+    .logged_nav_ul {
+        position: static;
+        right: 0;
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 8px 0;
+        width: 100%;
+    }
+
+
+    nav > ul > li {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --header-height: 8.4rem;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    h1 {
+        margin: 8px 0 15px;
+    }
+
+    nav > ul {
+        margin: 0 0 10px;
+    }
+}

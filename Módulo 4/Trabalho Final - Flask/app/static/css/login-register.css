@@ -1,0 +1,85 @@
+main {
+    box-shadow: 1px 1px 1px var(--light-shadow);
+    border-radius: 15px;
+    background-color: var(--interface-bg-color);
+    padding: 25px;
+    margin: 30px auto;
+    width: 400px;
+}
+
+h2 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+form textarea {
+    resize: none;
+    padding: 5px;
+}
+
+form textarea, .text-input {
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.233);
+
+    font-size: 1rem;
+
+    width: 90%;
+    margin-left: 0.8rem;
+}
+
+form .text-input {
+    height: 1.2rem;
+    padding: 3px;
+    background-color: white;
+}
+form .checkbox {
+    all: unset;
+    width: 20px;
+    height: 20px;
+}
+
+form .checkbox:checked {
+    color: red;
+}
+
+form .submit-button {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    margin-top: 20px;
+    padding: 4px;
+
+    border-radius: 15px;
+    background-color: var(--secundary-accent-color);
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #465a24;
+}
+
+.redirect {
+    color: var(--tertiary-accent-color);
+    text-align: center;
+    display: inline-block;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.redirect:hover {
+    color: #004c53;
+}
+
+@media screen and (max-width: 440px) {
+    main {
+        width: 80%;
+    }
+}

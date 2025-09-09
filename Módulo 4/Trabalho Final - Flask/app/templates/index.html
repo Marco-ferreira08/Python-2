@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href={{ url_for("static", filename="css/index.css") }}>
+{% endblock %}
+{% block content %}
+    {% if user and user.is_authenticated %}
+    <aside class="profile">
+        <h2>Olá, <span class="profile-username">{{ user.username }}</span>!</h2>
+        <div class="profile__content">
+            <div class="profile_img_div">
+                <img src={{ user.img_URL }} alt="" class="profile_img">
+            </div>
+            <div class="profile-bio-div">
+                <h3>Sua bio:</h3>
+                <p class="profile-bio">{{ user.bio }}</p>
+            </div>
+        </div>
+    </aside>
+    <main class="timeline">
+        {% if timeline and timeline|length > 0  %}
+            {% for post in timeline %}
+                <article class="timeline__post">
+                    <div class="post-avatar-div">
+                        <img src={{ post.author.img_URL }} class="post-avatar" alt="">
+                    </div >
+                    <div class="post__data">
+                        <div class="post__label">
+                            <label class="post__label-username">{{ post.author.username }}</label>
+                            <label class="post__label-date">{{ post.get_strDate() }}</label>
+                        </div>
+                        <div class="post__content">
+                            <p class="post__content-p">{{ post.body }}</p>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        {% else %}
+            <p>Não há nenhum post no momento, volte mais tarde</p>
+        {% endif %}
+    </main>
+    {% else %}
+    <h2>Olá, deseja fazer login?</h2>
+    {% endif %}
+{% endblock %}
